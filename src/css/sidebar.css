@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+}
+
+/* Menu - Sidebar */
+.sidebars{
+    position: fixed;
+    width: 220px;
+    height: calc(100% - 59px);
+    background: #202057;
+    transition: all 0.5s ease;transition: .5s ease-in-out;
+    overflow-y: auto;
+    top: 59px;
+    bottom: 0;
+}
+.sidebars header{
+    font-size: 14px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebars .link{
+    display: block;
+    height: 70px;
+    width: 100%;
+    color: white;
+    line-height: 70px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-left: 5px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s ease;
+    text-decoration: none !important;
+}
+.link.active, .link:hover{
+    border-left: 5px solid white;
+}
+.sidebars .link i{
+    font-size: 14px;
+    margin-right: 16px;
+}
+.sidebars .link span{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsividade CSS */
+@media(max-width: 800px){
+    .sidebars{
+        height: 100%;
+        width: 50px;
+        left: 0;
+    }
+    header,#button,#cancel{
+        display: none;
+    }
+    .sm-hide{
+        visibility: hidden;
+    }
+    .sidebars .link{
+        padding-left: 0px !important;
+    }
+    .sidebars .link i{
+        width: 100% !important;
+        padding-left: 12.5px;
+    }
+    .sidebars .link:hover span{
+        opacity: 1;
+        visibility: hidden;
+    }
+    .margem{
+        transition: all 0.5s ease;transition: .5s ease-out;
+        margin-left: 100px;
+        margin-right: 20px;
+    }
+}
+
+.error{
+    border: 3px red;
+}
